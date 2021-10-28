@@ -1,0 +1,9 @@
+loop that sets newScores to oldScores shifted once left with element - copied to the end
+10 20 30 40 goes to 20 30 40 10
+both loops will have the same size
+int endVal = oldVector.size() - 1
+newVector.at(endVal) = oldVector.at(0); 
+// Loop that moves old values back one and stores it as a new vector
+for (i = 1, i < oldVector.size(); ++i) {
+   newVector.at(i - 1) = oldVector.at(i);
+}

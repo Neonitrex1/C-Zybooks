@@ -1,0 +1,24 @@
+for (i = 0; i < dataPoints.size(); ++i) {
+      if (dataPoints.at(i) > maxVal) {
+         maxVal = dataPoints.at(i);
+         dataPoints.at(i) += -4;
+      }
+   }
+==============
+if vector oldData = newData, print "Data matches!" and end line
+else oldData = newData
+already have two loops that ask for values for old/new data w/ .size() = 4
+for (i = 0; i < oldData.size(); ++i) {
+   if (oldData.at(i) == newData.at(i)) {
+      cout << "Data matches!" << endl;
+   }
+   else {
+      oldData.at(i) = newData.at(i);
+   }
+}
+//FIX ME: whenever data matches, it will print multiple times
+bool msg; //at the beginning of the code
+when values match, msg = true
+after loop is done:
+if (msg == true) {
+   cout << "Data matches!" << endl; 

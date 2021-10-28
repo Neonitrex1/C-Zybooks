@@ -1,0 +1,19 @@
+loop that subtracts from each element IF orig. statement > 0
+else assign element with 0
+bool subAll;
+for (i = 0; i < lowerScores.size(); ++i) {
+   if (lowerScores.at(i) > 0) {
+      subAll = true;
+   }
+   if (subAll == true) {
+      for (i = 0; i < lowerScores.size(); ++i) {
+         lowerScores.at(i) -= 1;
+      }
+   }
+}
+for (i = 0; i < lowerScores.size(); ++i) {
+   if (lowerScores.at(i) <= 0) {
+   lowerScores.at(i) = 0;
+   }
+}
+// FIX ME: since the program first subtracts by 1, inputs of 1 will turn 0. Change <= TO < 0 

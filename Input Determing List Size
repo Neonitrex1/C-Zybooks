@@ -1,0 +1,20 @@
+vector<int> numOfN;
+int i;
+int n;
+int x;
+
+//Collecting input values 'n' and storing it in vector numOfN
+do {
+cin >> n;
+numOfN.push_back(n);
+}
+while (!(n == 0));
+
+//Defining 'x' as the size of the list that is not needed
+x = numOfN.at(numOfN.size() - 2);
+
+//Outputting the values of the vector
+ // - 1 on the first two parts of the range moves the loop back one b/c it was including the 0 at the end which isn't wanted
+for (i = numOfN.size() - x - 1; i < numOfN.size() - 1; ++i) {    
+   cout << numOfN.at(i) << endl;
+}

@@ -1,0 +1,20 @@
+create a loop that stores integers into an integer vector
+stop this loop when input 0 is met
+then most likely use an if statement that has a nested loop to output values less than 0 in reverse order
+vector<int> listOfNum;
+int num;
+int i;
+
+//Collecting and storing input while input is not 0
+do {
+cin >> num;
+listOfNum.push_back(num);
+}
+while (!(n == 0));
+
+//Outputting integers < 0 in the list in backwards order
+for (i = listOfNum.size() - 1; i >= 0; i--) {
+   if (listOfNum.at(i) < 0) {
+      cout << listOfNum.at(i) << endl;
+   }
+} 

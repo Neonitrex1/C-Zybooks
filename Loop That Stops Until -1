@@ -1,0 +1,30 @@
+create loop that takes input until input = -1, do not store -1 into the vector
+either start at position 0
+or start at position 1
+int numS;
+int i;
+int second;
+vector<int> listOfNum;
+
+//Collecting inputs till -1 is hit
+do {
+   cin >> numS;
+   listOfNum.push_back(numS);
+}
+while (!(numS == -1));
+
+//Just defining what the 2nd last integer for readability (Not including -1 in the range)
+second = listOfNum.at(listOfNum.size() - 1);
+
+//If the second last number is odd, list the numbers starting from the 2nd inc. by 2
+if (second % 2 == -1 | OR | 1) {
+   for (i = 1; i < listOfNum.size() - 1; i += 2) {
+      cout << listOfNum.at(i) << endl;
+   }
+}
+//Else start at 1st
+else if (second % 2 || second % -2 == 0) {
+   for (i = 0; i < listOfNum.size() - 1; i += 2) {
+      cout << listOfNum.at(i) << endl;
+   }
+} 
